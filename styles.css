@@ -37,6 +37,9 @@ nav ul {
   gap: 15px;
   padding: 0 10%;
 }
+li {
+  position: relative;
+}
 
 .hero {
   width: 100%;
@@ -59,4 +62,40 @@ nav ul {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.scrollmenu {
+  /* escondido = hidden */
+  visibility: hidden;
+  opacity: 0;
+  top: 15;
+  left: 0;
+
+  position: absolute;
+  transition: all 0.5s ease;
+  width: 100%;
+  margin: auto;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+li {
+  display: block;
+  transition-duration: 0.5s;
+  padding: 10px;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
 }
